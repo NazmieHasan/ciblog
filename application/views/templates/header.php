@@ -18,6 +18,9 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="<?php echo base_url(); ?>">Home</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url(); ?>posts/create">Create Post</a>
+                    </li>
                      <li class="nav-item">
                         <a class="nav-link" href="<?php echo base_url(); ?>posts">Posts</a>
                     </li>
