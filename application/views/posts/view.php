@@ -12,13 +12,13 @@
     <?= $post['body'] ?>
 </div>
 
-<hr />
-<p>
-    <a class="btn btn-secondary" href="<?php echo base_url(); ?>posts/edit/<?php echo $post['slug']; ?>">Edit</a>
-</p>
-<?= form_open('/posts/delete/'.$post['id']); ?>
-    <input type="submit" value="Delete" class="btn btn-danger">
-</form>
+<?php if($this->session->userdata('user_id') == $post['user_id']): ?>   
+    <hr />
+    <a class="btn btn-primary" href="<?php echo base_url(); ?>posts/edit/<?php echo $post['slug']; ?>">Edit</a>
+    <?php echo form_open('/posts/delete/'.$post['id']); ?>
+        <input type="submit" value="Delete" class="btn btn-danger">
+    </form>
+<?php endif; ?>
 <hr />
 
 <h3>Comments</h3>
